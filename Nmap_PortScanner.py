@@ -1,7 +1,9 @@
 import nmap 
 ns = nmap.PortScanner() #initialize the nmap port scanner 
 print(ns.nmap_version()) #printing the version og=f Nmap port version
-ns.scan('127.0.0.1','1-65535',-v) # -Av gives all the information
+""" first argument is your required IP-address and second argument is port which you want to scan from 1 to 65535
+third arugument is view full details '-v' and '-Av' for all details see the nmap documentation"""
+ns.scan('127.0.0.1','1-65535',-v) 
 print(ns.scaninfo())  #printing the scanned details
 
 print(ns.csv()) # this is for scanned details with comma seprated
